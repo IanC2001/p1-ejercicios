@@ -106,6 +106,14 @@ footer ul li a {
     color: #d0e0e3;
 }
 
+.ejercicios{
+    font-size: 18px;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(110, 110, 110);
+}
+
+
 /**
  *	Web
  */
