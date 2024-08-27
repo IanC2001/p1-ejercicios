@@ -14,8 +14,29 @@ let acumuladorAprobados = 0, acumuladorDesaprobados = 0, acumuladorPromocionados
 let maxNota = 1 , minNota = 10;
 
 do{
+    let nota;
+    let notaValida = true;
+    do{
+        //Lo que se repite
+        nota = parseInt(prompt("Ingrese una nota del 1 al 10: "));
+        //Esto va devolver
+        // -Numero entre 1 y 10
+        // -Numero menor a 1
+        // -Numero mayor a 1
+        // -NaN
+        if(isNaN(nota)){
+            alert("Ingrese una nota númerica");
+            notaValida = false;
+        }else if(nota < 1){
+            alert("Ingrese una nota mayor o igual a 1");
+            notaValida = false;
+        }else if(nota > 10){
+            alert("Ingrese una nota menor o igual a 10");
+            notaValida = false;
+        }
+    }while(!notaValida); // notavalida != true
+    
     //Lo que se repite
-    nota = parseInt(prompt("Ingrese una nota del 1 al 10: "));
     //Empiezo a preguntar
     if(nota < 4){
         contadorDesaprobados++;
