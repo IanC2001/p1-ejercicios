@@ -1,3 +1,158 @@
 .vscode
 2024-02-clase-01-ej-03/index.js
 2024-02-clase-01-ej-03/index.html
+
+19/9/24 (ausente profe, no hubo carpeta 2024-02-etc..)
+Clase de objetos:
+
+metodo:
+
+function mostrarPresentacion(){
+console.log(`hola, mi nombre es ${this.nombre} ${this.apellido} y vivo en ${this.direccion}`)
+}
+
+const usuario1 ={
+nombre: 'Alejandro',
+apellido :' Martinez',
+direccion :'Av.Siempre viva 123',
+presentarse: mostrarPresentacion
+}
+
+//Asi se ejecuta
+usuario1.presentarse(); // this === usuario1
+usuario2.presentarse(); // this === usuario2
+
+let obj1 ={
+p1: 'v1',
+p2: 'v2'
+m1(){
+console.log(this.p1)
+},
+p3:{
+p1: 'v3',
+p2: 'v4'
+m1(){
+console.log(this.p1)
+},
+}
+}
+
+obj1.m1(); // this === v1
+obj1.p3.m1(); // this === p3
+
+let usuario = {
+nombre: 'Alejandro',
+apellido :' Martinez',
+//direccion :'calle falsa 1234',
+direccion {
+altura: '1234',
+calle :'calle falsa'
+}
+amigos:[
+{
+nombre :' Marquitos',
+},
+{
+nombre: 'Susana',
+}
+{
+nombre: 'Pedro',
+}
+]
+}
+
+console.log(usuario.direccion.calle)
+console.log(usuario.amigos[1].nombre) //Susana
+
+Ejercicio 1:
+
+"use strict"
+const calculadora = {
+    a: null,
+    b: null,
+
+    leer(){
+        this.a = obtenerNumero('Ingrese el primer número');
+        this.b = obtenerNumero('Ingrese el segundo número');
+    }
+};
+
+sumar(){
+    return this.a + this.b;
+}
+multiplicar(){
+    return this.a * this.b;
+}
+
+calculadora.leer();
+
+function obtenerNumero(promptTexto){
+    let numero;
+
+    do{
+
+    numero =parseFloat(prompt(promptTexto || 'Ingrese un número'));
+    if(!isNan(numero)){
+    break;
+    }
+    }while(true);
+    return numero;
+    }
+
+
+Ejercicio 2:
+
+const libreria = {
+    libros: [],
+    agregarLibros(...libros) {
+        for (const libro of libros) {
+            this.libros.push(libro);  // Agrega cada libro recibido a la lista
+        }
+    },
+    listarLibros() {
+        for (const libro of this.libros) {
+            console.log(libro.resumen());  // Muestra el resumen de cada libro
+        }
+    }
+};
+
+function mostrarResumen() {
+    return `${this.titulo} de ${this.autor} (${this.genero})`;
+}
+
+const libro1 = {
+    titulo: 'It',
+    autor: 'Stephen King',
+    genero: 'Terror',
+    resumen: mostrarResumen
+};
+
+const libro2 = {
+    titulo: 'It II',
+    autor: 'Stephen King',
+    genero: 'Terror',
+    resumen: mostrarResumen
+};
+
+const libro3 = {
+    titulo: 'It III',
+    autor: 'Stephen King',
+    genero: 'Terror',
+    resumen: mostrarResumen
+};
+
+// Usar el método agregarLibros con varios libros
+libreria.agregarLibros(libro1, libro2, libro3);
+
+// Mostrar el resumen de los libros en consola
+libreria.listarLibros();
+
+// Para mostrar en vista HTML
+libreria.listarLibrosHTML = function() {
+    let respuesta = '<ul>';
+    for (const libro of this.libros) {
+        respuesta += `<li>${libro.resumen()}</li>`;
+    }
+    respuesta += '</ul>';
+    document.write(respuesta);
+};
