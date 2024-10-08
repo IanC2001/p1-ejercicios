@@ -1,32 +1,20 @@
-let biblioteca = [];
-//Intento leer el archivo json con los libros
-fetch("libros.json").then(response => response.json()).then(libros =>{
-    //Una vez que tengo los libros,
-    for(let libro of libros){
-        let obj = new Libro(
-            libro.nombre,
-            libro.autor,
-            libro.editorial,
-            libro.portada,
-        )
-        //Lo agrego a la página
-        document.querySelector(".container").innerHTML+= obj.toHTML();
-    }
-})
-    
+// Llamo al contructor de Biblioteca
+let biblioteca = new Biblioteca();
 
+function mostrarCatalogo() {
 
+    document.querySelector(".container").innerHTML = biblioteca.toHTML();
+}
 
+function pedirLibro(nombre) {
 
+    alert(`Quedan ${biblioteca.pedirLibro(nombre)} libros de ${nombre}`);
+}
 
+function devolverLibro(nombre) {
 
-
-
-
-
-
-
-
+    alert(`Quedan ${biblioteca.devolverLibro(nombre)} libros de ${nombre}`);
+}
 
 
 
