@@ -1,0 +1,44 @@
+[
+    {
+        "nombre": "Interstellar",
+        "portada": "https://pics.filmaffinity.com/Interstellar-366875261-large.jpg",
+        "generos": ["Thriller", "Ciencia ficción", "Suspenso"],
+        "publicacion": 2014
+    },
+    {
+        "nombre": "La vida es bella",
+        "portada": "https://es.web.img3.acsta.net/medias/nmedia/18/67/61/66/20098979.jpg",
+        "generos": ["Period Drama", "Tragedy","Tragic Romance","Comedy","Drama","Romance","War"],
+        "publicacion": 1997
+    },
+    {
+        "nombre": "Shutter Island",
+        "portada": "https://m.media-amazon.com/images/S/pv-target-images/e9e06e8df973a8eb8503834bc109ffc68937407224bd204870e7ba829154a668.jpg",
+        "generos": ["Thriller", "Misterio", "Drama"],
+        "publicacion": 2010
+    },
+    {
+        "nombre": "Deadpool & Wolverine",
+        "portada": "https://www.infobae.com/new-resizer/Zq227nOmsISA9xjcCSjq91KEJws=/arc-anglerfish-arc2-prod-infobae/public/QYUVGM2RSNFDTFAEEEC6CLB66Y.jpg",
+        "generos": ["Acción", "Aventura", "Ciencia ficción"],
+        "publicacion": 2024
+    },
+    {
+        "nombre": "Terrifiel 3",
+        "portada": "https://img.aullidos.com/imagenes/noticias/tw-40922.jpg",
+        "generos": ["Horror", "slash horror", "holiday"],
+        "publicacion": 2024
+    },
+    {
+        "nombre": "Pulp Fiction",
+        "portada": "https://m.media-amazon.com/images/M/MV5BMzNlNGRkZWYtNmE0Yy00NjQyLWFmMzItYWY5NGM2YWU4OWYwXkEyXkFqcGc@._V1_FMjpg_UY2362_.jpg",
+        "generos": ["Dark Comedy", "Drug Crime", "Gangstr", "Crime", "Drama"],
+        "publicacion": 1994
+    },
+    {
+        "nombre": "Avengers",
+        "portada": "https://m.media-amazon.com/images/I/81ExhpBEbHL._AC_SY679_.jpg",
+        "generos": ["Acción", "Aventura", "Ciencia ficción"],
+        "publicacion": 2019
+    }
+]
